@@ -12,7 +12,7 @@ import java.util.List;
 @UtilityClass
 public class MovieMapper {
 
-    public Movie toMovie(MovieRequest request){
+    public static Movie toMovie(MovieRequest request){
         List<Category> categories = request.categories()
                 .stream()
                 .map(categoryId -> Category.builder().id(categoryId).build())
@@ -34,7 +34,7 @@ public class MovieMapper {
 
     }
 
-    public MovieResponse toMovieResponse(Movie movie){
+    public static MovieResponse toMovieResponse(Movie movie){
         return MovieResponse
                 .builder()
                 .id(movie.getId())
