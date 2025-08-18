@@ -35,6 +35,13 @@ public class MovieService {
         return movieRepository.save(movie);
     }
 
+    public List<Movie> findMovieByCategories(Long categoryId){
+        return movieRepository.findMovieByCategories(List.of(Category
+                .builder()
+                .id(categoryId)
+                .build()));
+    }
+
     public Optional<Movie> patch(Long id, Movie updateMovie){
         Optional<Movie> optMovie = movieRepository.findById(id);
         if(optMovie.isPresent()){
