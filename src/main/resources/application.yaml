@@ -14,3 +14,7 @@ spring:
 
   flyway:
     enabled: true
+
+movievault:
+  security:
+    secret: "4VegEgbZidflae5UsdV65X89adwhOUfvVB/btjyonWLxsxSfEJeyWc153ONR7acQ/"
